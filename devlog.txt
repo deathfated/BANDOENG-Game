@@ -1,0 +1,13 @@
+17/01/22
+-following the tuto vid 1, used the ucup sprite but cut the south-facing sprite
+ to fit into the GODOT maximum sprite width limit (16384)
+-unlike the vid, didnt change the project settings window size to accomodate 
+ small pixel art size, but retain the Stretch and Test Width
+-following tuto vid 2
+-following tuto vid 3, change the MAX_SPEED on the player script to accomodate
+ the sprite being quite big, smoother walking speed
+-following tuto vid 4, change the size of the bush & collision to better fit
+ the size of the player sprite
+-following tuto vid 5&6
+-tried some spritework but got problems with offset, using the cutted og file for
+ now
