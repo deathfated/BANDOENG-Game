@@ -1,10 +1,12 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Char Sprites/Ucup_Sprite_Sheet_Full_360NF6.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Hitboxes and Hurtboxes/Hitbox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Char Sprites/Ucup/Ucup_Sprite-Sheet_Nu3360-min.png" type="Texture" id=4]
+[ext_resource path="res://Char Sprites/Ucup/Ucup Sprite-Sheet_Nu4 (360)-min.png" type="Texture" id=4]
 [ext_resource path="res://Player/BambooHitbox.gd" type="Script" id=5]
+[ext_resource path="res://Char Sprites/MediumShadow.png" type="Texture" id=6]
+[ext_resource path="res://Hitboxes and Hurtboxes/Hurtbox.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 11.2538
@@ -375,12 +377,13 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ false ]
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=10]
 resource_name = "RunDown"
 length = 0.8
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("DefaultSprite:frame")
 tracks/0/interp = 1
@@ -594,9 +597,18 @@ graph_offset = Vector2( -275.5, 56.5387 )
 radius = 64.0
 height = 180.0
 
+[sub_resource type="CapsuleShape2D" id=54]
+radius = 32.0
+height = 72.0
+
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
+collision_mask = 17
 script = ExtResource( 2 )
+
+[node name="shadow" type="Sprite" parent="."]
+scale = Vector2( 3, 2 )
+texture = ExtResource( 6 )
 
 [node name="DefaultSprite" type="Sprite" parent="."]
 visible = false
@@ -604,15 +616,15 @@ position = Vector2( 0, -55.0408 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 hframes = 52
-frame = 6
+frame = 23
 
 [node name="BambooSprite" type="Sprite" parent="."]
 position = Vector2( -0.0223932, -55.0667 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 hframes = 16
-vframes = 8
-frame = 104
+vframes = 12
+frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
@@ -646,9 +658,9 @@ tree_root = SubResource( 21 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 22 )
-parameters/BambooAttack/blend_position = Vector2( -0.100575, 0.282948 )
-parameters/Idle/blend_position = Vector2( 0.00287354, -0.0222543 )
-parameters/Run/blend_position = Vector2( -0.000687778, -0.00867057 )
+parameters/BambooAttack/blend_position = Vector2( -0.00172412, -0.00953758 )
+parameters/Idle/blend_position = Vector2( -0.00172412, -0.0042969 )
+parameters/Run/blend_position = Vector2( 0.000574708, 0.00317907 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -55 )
@@ -666,4 +678,14 @@ script = ExtResource( 5 )
 shape = SubResource( 53 )
 disabled = true
 
+[node name="Hurtbox" parent="." instance=ExtResource( 7 )]
+position = Vector2( 0, -55 )
+collision_layer = 4
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+shape = SubResource( 54 )
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+
 [editable path="HitboxPivot/BambooHitbox"]
+[editable path="Hurtbox"]
