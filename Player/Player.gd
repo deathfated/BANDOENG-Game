@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
+
 export var ACCELERATION = 500
 export var MAX_SPEED = 200
 export var FRICTION = 500
@@ -21,6 +23,7 @@ onready var bambooHitbox = $HitboxPivot/BambooHitbox
 onready var hurtbox = $Hurtbox
 
 func _ready():
+	randomize()
 	stats.connect("no_health", self, "queue_free")
 	animationTree.active = true
 	bambooHitbox.knockback_vector = roll_vector
@@ -80,3 +83,5 @@ func _on_Hurtbox_area_entered(_area):
 	stats.health -= 1
 	hurtbox.start_invincibility(0.5)
 	hurtbox.create_hit_effect()
+	var playerHurtSound = PlayerHurtSound.instance()
+	get_tree().current_scene.add_child(playerHurtSound)
