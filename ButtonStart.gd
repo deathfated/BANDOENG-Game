@@ -1,11 +1,7 @@
 extends Button
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
-# Called when the node enters the scene tree for the first time.
-#	pass # Replace with function body.
-#	font_color = Color(0.5,0.5,0.5,0.5)
+var font_color = Color(0.5,0.5,0.5,0.5)
+var font_color_pressed = Color(1, 1, 1, 1)
 
 func _ready():
 	var button = Button.new()

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Menu/Tahu!_48.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Menu/Buttons/TemplateButton.gd" type="Script" id=2]
+
+[node name="StartGame" type="Button"]
+margin_right = 360.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 360, 60 )
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = ExtResource( 1 )
+text = "New Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}

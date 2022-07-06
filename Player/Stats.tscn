@@ -4,5 +4,3 @@
 
 [node name="Stats" type="Node"]
 script = ExtResource( 1 )
-
-[connection signal="no_health" from="." to="." method="_on_Stats_no_health"]

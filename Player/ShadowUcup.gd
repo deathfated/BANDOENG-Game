@@ -10,7 +10,9 @@ export var WANDER_TARGET_RANGE = 4
 enum {
 	IDLE,
 	WANDER,
-	CHASE
+	CHASE,
+	ATTACK,
+	DEATH
 }
 
 var state = CHASE
@@ -26,6 +28,7 @@ onready var playerDetectionZone = $PlayerDetectionZone
 onready var hurtbox = $Hurtbox
 onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
+onready var blinkAnimationPlayer = $BlinkAnimationPlayer
 
 func _ready():
 	animationTree.active = true
@@ -59,10 +62,23 @@ func _physics_process(delta):
 			else:
 				state = IDLE
 			#sprite.flip_h = velocity.x < 0
+		ATTACK:
+			attack_state(delta)
+			
+		DEATH:
+				pass
 	
 	if softCollision.is_colliding():
 		velocity += softCollision.get_push_vector() * delta * 400
 	velocity = move_and_slide(velocity)
+
+func attack_state(_delta):
+	velocity = Vector2.ZERO
+	animationState.travel("Attack")
+
+func attack_animation_finished():
+	state = IDLE
+	
 
 func accelerate_towards_point(point, delta):
 	var direction = global_position.direction_to(point)
@@ -88,10 +104,16 @@ func _on_Hurtbox_area_entered(area):
 	knockback = area.knockback_vector * 150
 	#queue_free()
 	hurtbox.create_hit_effect()
+	hurtbox.start_invincibility(0.4)
 
 func _on_Stats_no_health():
 	queue_free()
 	var enemyDeathEffect = EnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position
-	
+
+func _on_Hurtbox_invincibility_started():
+	blinkAnimationPlayer.play("Start")
+
+func _on_Hurtbox_invincibility_ended():
+	blinkAnimationPlayer.play("Stop")

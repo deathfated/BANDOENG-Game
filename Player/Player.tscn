@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Char Sprites/Ucup_Sprite_Sheet_Full_360NF6.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -8,6 +8,11 @@
 [ext_resource path="res://Char Sprites/MediumShadow.png" type="Texture" id=6]
 [ext_resource path="res://Hitboxes and Hurtboxes/Hurtbox.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Music and Sounds/Swipe.wav" type="AudioStream" id=8]
+[ext_resource path="res://WhiteShader.tres" type="Shader" id=9]
+
+[sub_resource type="ShaderMaterial" id=55]
+shader = ExtResource( 9 )
+shader_param/active = false
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 11.2538
@@ -317,6 +322,126 @@ length = 0.6
 resource_name = "AttackUp3"
 length = 0.4
 
+[sub_resource type="Animation" id=59]
+resource_name = "DeathDown"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BambooSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 128, 129, 130, 131, 132, 133, 134, 135, 136, 137 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "death_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=60]
+resource_name = "DeathLeft"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BambooSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 176, 177, 178, 179, 180, 181, 182, 183, 184, 185 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "death_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=61]
+resource_name = "DeathRight"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BambooSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 144, 145, 146, 147, 148, 149, 150, 151, 152, 153 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "death_animation_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=62]
+resource_name = "DeathUp"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BambooSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 160, 161, 162, 163, 164, 165, 166, 167, 168, 169 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "death_animation_finished"
+} ]
+}
+
 [sub_resource type="Animation" id=9]
 resource_name = "IdleDown"
 length = 0.5
@@ -578,6 +703,31 @@ min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
 blend_mode = 1
 
+[sub_resource type="AnimationNodeAnimation" id=63]
+animation = "DeathDown"
+
+[sub_resource type="AnimationNodeAnimation" id=64]
+animation = "DeathUp"
+
+[sub_resource type="AnimationNodeAnimation" id=65]
+animation = "DeathRight"
+
+[sub_resource type="AnimationNodeAnimation" id=66]
+animation = "DeathLeft"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=67]
+blend_point_0/node = SubResource( 63 )
+blend_point_0/pos = Vector2( 0, 1.1 )
+blend_point_1/node = SubResource( 64 )
+blend_point_1/pos = Vector2( 0, -1.1 )
+blend_point_2/node = SubResource( 65 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 66 )
+blend_point_3/pos = Vector2( -1, 0 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
 [sub_resource type="AnimationNodeAnimation" id=11]
 animation = "IdleLeft"
 
@@ -637,16 +787,24 @@ blend_mode = 1
 [sub_resource type="AnimationNodeStateMachineTransition" id=52]
 switch_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=68]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=69]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=70]
+
 [sub_resource type="AnimationNodeStateMachine" id=21]
 states/BambooAttack/node = SubResource( 45 )
 states/BambooAttack/position = Vector2( 118.833, 210.509 )
+states/Death/node = SubResource( 67 )
+states/Death/position = Vector2( 318.167, 211.944 )
 states/Idle/node = SubResource( 15 )
 states/Idle/position = Vector2( 117.666, 111.643 )
 states/Run/node = SubResource( 20 )
 states/Run/position = Vector2( 283, 111.593 )
-transitions = [ "Idle", "Run", SubResource( 23 ), "Run", "Idle", SubResource( 44 ), "Idle", "BambooAttack", SubResource( 47 ), "BambooAttack", "Idle", SubResource( 52 ) ]
+transitions = [ "Idle", "Run", SubResource( 23 ), "Run", "Idle", SubResource( 44 ), "Idle", "BambooAttack", SubResource( 47 ), "BambooAttack", "Idle", SubResource( 52 ), "Idle", "Death", SubResource( 68 ), "Run", "Death", SubResource( 69 ), "BambooAttack", "Death", SubResource( 70 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -275.5, 56.5387 )
+graph_offset = Vector2( -259.029, 56.5387 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=22]
 
@@ -657,6 +815,54 @@ height = 180.0
 [sub_resource type="CapsuleShape2D" id=54]
 radius = 35.0
 height = 82.0
+
+[sub_resource type="Animation" id=58]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("BambooSprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=56]
+resource_name = "Start"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BambooSprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=57]
+resource_name = "Stop"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BambooSprite:material:shader_param/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
@@ -673,9 +879,10 @@ position = Vector2( 0, -55.0408 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 hframes = 52
-frame = 23
+frame = 21
 
 [node name="BambooSprite" type="Sprite" parent="."]
+material = SubResource( 55 )
 position = Vector2( -0.0223932, -55.0667 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
@@ -684,6 +891,7 @@ vframes = 12
 frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 rotation = -1.5708
 shape = SubResource( 1 )
 
@@ -700,6 +908,10 @@ anims/AttackR3 = SubResource( 31 )
 anims/AttackUp = SubResource( 34 )
 anims/AttackUp2 = SubResource( 35 )
 anims/AttackUp3 = SubResource( 36 )
+anims/DeathDown = SubResource( 59 )
+anims/DeathLeft = SubResource( 60 )
+anims/DeathRight = SubResource( 61 )
+anims/DeathUp = SubResource( 62 )
 anims/IdleDown = SubResource( 9 )
 anims/IdleLeft = SubResource( 6 )
 anims/IdleRight = SubResource( 7 )
@@ -713,12 +925,15 @@ anims/RunUp = SubResource( 4 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 21 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
 parameters/playback = SubResource( 22 )
-parameters/BambooAttack/blend_position = Vector2( -0.00172412, -0.00953758 )
+parameters/BambooAttack/blend_position = Vector2( 0.000584126, 0.00676239 )
+parameters/Death/blend_position = Vector2( 0.000584126, -0.0525125 )
 parameters/Idle/blend_position = Vector2( -0.00172412, -0.0042969 )
-parameters/Run/blend_position = Vector2( 0.000574708, 0.00317907 )
+parameters/Run/blend_position = Vector2( 0.00525701, 0.00676239 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
+visible = false
 position = Vector2( 0, -55 )
 __meta__ = {
 "_gizmo_extents_": 60.0
@@ -735,6 +950,7 @@ shape = SubResource( 53 )
 disabled = true
 
 [node name="Hurtbox" parent="." instance=ExtResource( 7 )]
+visible = false
 position = Vector2( 0, -55 )
 collision_layer = 4
 
@@ -744,7 +960,14 @@ shape = SubResource( 54 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 
+[node name="BlinkAnimPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 58 )
+anims/Start = SubResource( 56 )
+anims/Stop = SubResource( 57 )
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]
+[connection signal="invincibility_started" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_started"]
 
 [editable path="HitboxPivot/BambooHitbox"]
 [editable path="Hurtbox"]
