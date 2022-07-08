@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const EnemyDeathEffect = preload("res://Effects/EnemyDeathEffect.tscn")
+const EnemyDeathEffect = preload("res://Effects/EnemyDENica.tscn")
 
 export var ACCELERATION = 300
 export var MAX_SPEED = 100
@@ -91,6 +91,7 @@ func accelerate_towards_point(point, delta):
 	animationTree.set("parameters/Idle/blend_position", direction)
 	animationTree.set("parameters/Run/blend_position", direction)
 	animationTree.set("parameters/Death/blend_position", direction)
+	animationTree.set("parameters/Attack/blend_position", direction)
 	
 	animationState.travel("Run")
 
@@ -130,3 +131,6 @@ func _on_Hurtbox_invincibility_started():
 
 func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
+
+func _on_Hitbox_area_entered(area):
+	state = ATTACK

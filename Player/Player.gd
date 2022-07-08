@@ -17,6 +17,7 @@ var state = MOVE
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
 var stats = PlayerStats
+var playerisded = false
 
 
 onready var animationPlayer = $AnimationPlayer
@@ -28,7 +29,7 @@ onready var blinkAnimationPlayer = $BlinkAnimPlayer
 
 func _ready():
 	randomize()
-	stats.connect("no_health", self, "queue_free")
+	stats.connect("no_health", self, "death_state")
 	animationTree.active = true
 	bambooHitbox.knockback_vector = roll_vector
 
@@ -53,6 +54,7 @@ func move_state(delta):
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationTree.set("parameters/BambooAttack/blend_position", input_vector)
+		animationTree.set("parameters/Ded/blend_position", input_vector)
 		animationState.travel("Run")
 #		if input_vector.x > 0:
 #			animationPlayer.play("RunRight")
@@ -71,14 +73,20 @@ func move_state(delta):
 	velocity = move_and_slide(velocity)
 	
 	if Input.is_action_just_pressed("attack"):
-			state = ATTACK
+		state = ATTACK
+	
+	if (playerisded == true):
+		state = DEATH
 
 func attack_state(_delta):
 	velocity = Vector2.ZERO
 	animationState.travel("BambooAttack")
 
 func death_state():
-	animationState.travel("Death")
+	playerisded = true
+	hurtbox.death()
+	set_collision_layer_bit(1, false)
+	animationState.travel("Ded")
 
 #func _on_Stats_no_health():
 #	animationState.travel("Death")
@@ -86,8 +94,6 @@ func death_state():
 func attack_animation_finished():
 	state = MOVE
 
-func death_animation_finished():
-	queue_free()
 
 func _on_Hurtbox_area_entered(area):
 	stats.health -= area.damage
@@ -101,6 +107,3 @@ func _on_Hurtbox_invincibility_started():
 
 func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
-
-func _on_PlayerStats_no_health():
-	animationState.travel("Death")

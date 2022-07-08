@@ -1,17 +1,17 @@
 [gd_scene load_steps=96 format=2]
 
-[ext_resource path="res://Grass.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/World/Grass.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/World/Tree.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Bush.tscn" type="PackedScene" id=4]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Player/ShadowUcup.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/World/TNgrassPavementMASTER4-export.png" type="Texture" id=7]
 [ext_resource path="res://Assets/World/TNCliff2.png" type="Texture" id=8]
 [ext_resource path="res://Assets/World/TNCliff.png" type="Texture" id=9]
 [ext_resource path="res://Assets/World/TNgrass.png" type="Texture" id=10]
-[ext_resource path="res://Camera2D.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Level0.gd" type="Script" id=12]
+[ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Level0.gd" type="Script" id=12]
+[ext_resource path="res://Player/NICA.tscn" type="PackedScene" id=13]
 
 [sub_resource type="TileSet" id=1]
 1/name = "TNgrassPavementMASTER4-export.png 1"
@@ -866,14 +866,14 @@ position = Vector2( 512, 304 )
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
 
-[node name="ShadowUcup" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 1168, 336 )
+[node name="NICA" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 887, 1152 )
 
-[node name="ShadowUcup2" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 968, 1152 )
+[node name="NICA2" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 1147, 372 )
 
-[node name="ShadowUcup3" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 2168, 808 )
+[node name="NICA3" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 111, 296 )
 
 [node name="Bushes" type="YSort" parent="YSort"]
 position = Vector2( 448, -104 )

@@ -337,20 +337,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 128, 129, 130, 131, 132, 133, 134, 135, 136, 137 ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "death_animation_finished"
-} ]
-}
 
 [sub_resource type="Animation" id=60]
 resource_name = "DeathLeft"
@@ -366,20 +352,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 176, 177, 178, 179, 180, 181, 182, 183, 184, 185 ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "death_animation_finished"
-} ]
 }
 
 [sub_resource type="Animation" id=61]
@@ -397,20 +369,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 144, 145, 146, 147, 148, 149, 150, 151, 152, 153 ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "death_animation_finished"
-} ]
-}
 
 [sub_resource type="Animation" id=62]
 resource_name = "DeathUp"
@@ -426,20 +384,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 160, 161, 162, 163, 164, 165, 166, 167, 168, 169 ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 1.1 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "death_animation_finished"
-} ]
 }
 
 [sub_resource type="Animation" id=9]
@@ -795,16 +739,16 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id=21]
 states/BambooAttack/node = SubResource( 45 )
-states/BambooAttack/position = Vector2( 118.833, 210.509 )
-states/Death/node = SubResource( 67 )
-states/Death/position = Vector2( 318.167, 211.944 )
+states/BambooAttack/position = Vector2( 116.833, 245.176 )
+states/Ded/node = SubResource( 67 )
+states/Ded/position = Vector2( 318.389, 246.031 )
 states/Idle/node = SubResource( 15 )
 states/Idle/position = Vector2( 117.666, 111.643 )
 states/Run/node = SubResource( 20 )
-states/Run/position = Vector2( 283, 111.593 )
-transitions = [ "Idle", "Run", SubResource( 23 ), "Run", "Idle", SubResource( 44 ), "Idle", "BambooAttack", SubResource( 47 ), "BambooAttack", "Idle", SubResource( 52 ), "Idle", "Death", SubResource( 68 ), "Run", "Death", SubResource( 69 ), "BambooAttack", "Death", SubResource( 70 ) ]
+states/Run/position = Vector2( 318.334, 111.66 )
+transitions = [ "Idle", "Run", SubResource( 23 ), "Run", "Idle", SubResource( 44 ), "Idle", "BambooAttack", SubResource( 47 ), "BambooAttack", "Idle", SubResource( 52 ), "Idle", "Ded", SubResource( 68 ), "Run", "Ded", SubResource( 69 ), "BambooAttack", "Ded", SubResource( 70 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -259.029, 56.5387 )
+graph_offset = Vector2( -259.029, 88.4665 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=22]
 
@@ -879,7 +823,7 @@ position = Vector2( 0, -55.0408 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 hframes = 52
-frame = 21
+frame = 19
 
 [node name="BambooSprite" type="Sprite" parent="."]
 material = SubResource( 55 )
@@ -925,10 +869,9 @@ anims/RunUp = SubResource( 4 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 21 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource( 22 )
 parameters/BambooAttack/blend_position = Vector2( 0.000584126, 0.00676239 )
-parameters/Death/blend_position = Vector2( 0.000584126, -0.0525125 )
+parameters/Ded/blend_position = Vector2( 0, 0 )
 parameters/Idle/blend_position = Vector2( -0.00172412, -0.0042969 )
 parameters/Run/blend_position = Vector2( 0.00525701, 0.00676239 )
 
