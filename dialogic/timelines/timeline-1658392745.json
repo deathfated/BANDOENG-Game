@@ -24,6 +24,12 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
+			"text": "Tekan ENTER untuk memajukan dialog"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
 			"text": "(Ucup menghela nafas lelah, dia khawatir)"
 		},
 		{

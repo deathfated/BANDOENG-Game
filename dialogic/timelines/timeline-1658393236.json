@@ -128,7 +128,19 @@
 			"character": "character-1658214863.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "\"Aku mendapat kabar kalau mereka punya rencana tersembunyi. Aku tidak akan menunggu dan asal patuh. Bagi yang cinta kemerdekaan negara kita, mari kita peras informasi dari mereka!\""
+			"text": "\"Aku mendapat kabar kalau mereka punya rencana tersembunyi.\""
+		},
+		{
+			"character": "character-1658214863.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"Aku tidak akan menunggu dan asal patuh!\""
+		},
+		{
+			"character": "character-1658214863.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"Bagi yang cinta kemerdekaan negara kita, mari kita peras informasi dari mereka!\""
 		},
 		{
 			"emit_signal": "changeScene",

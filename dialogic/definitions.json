@@ -1,11 +1,19 @@
 {
 	"glossary": [
 		{
-			"extra": "test test",
+			"extra": "",
 			"id": "1658213062-787",
 			"name": "Bandung",
-			"text": "A city in West Java. The setting for this story.",
+			"text": "Kota yang terletak di Propinsi Jawa Barat. Latar tempat dari cerita ini.",
 			"title": "Bandung",
+			"type": 1
+		},
+		{
+			"extra": "",
+			"id": "1658820833-745",
+			"name": "NICA",
+			"text": "Tentara sipil yang menjadi perpanjangan pemerintahan Belanda pada bekas wilayah koloni Hindia Belanda.",
+			"title": "Nederlandsch Indische Civiele Administratie. ",
 			"type": 1
 		}
 	],
