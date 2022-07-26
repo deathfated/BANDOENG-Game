@@ -1,0 +1,18 @@
+
+  {
+    "begin": [
+      "(You grasp your chest, catching your breath)",
+      "Damn, I hope I'm not late...",
+      "More NICA soldiers?!",
+      "I have to get past them..."
+    ],
+    "victor": [
+      "There you are Ucup!",
+      "Those NICA dogs aren't too much trouble for you, huh?",
+      "C'mon, it's time for the speech."
+    ],
+    "villager": [
+      "Hmm?",
+      "I'm just an NPC, go north to Victor."
+    ]
+  }

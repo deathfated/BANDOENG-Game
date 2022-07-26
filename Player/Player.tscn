@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://Char Sprites/Ucup_Sprite_Sheet_Full_360NF6.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -808,6 +808,9 @@ tracks/0/keys = {
 "values": [ false ]
 }
 
+[sub_resource type="CircleShape2D" id=71]
+radius = 56.0
+
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 collision_mask = 17
@@ -869,10 +872,11 @@ anims/RunUp = SubResource( 4 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 21 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
 parameters/playback = SubResource( 22 )
 parameters/BambooAttack/blend_position = Vector2( 0.000584126, 0.00676239 )
 parameters/Ded/blend_position = Vector2( 0, 0 )
-parameters/Idle/blend_position = Vector2( -0.00172412, -0.0042969 )
+parameters/Idle/blend_position = Vector2( 0.000577331, 0.00778306 )
 parameters/Run/blend_position = Vector2( 0.00525701, 0.00676239 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
@@ -907,6 +911,16 @@ stream = ExtResource( 8 )
 anims/RESET = SubResource( 58 )
 anims/Start = SubResource( 56 )
 anims/Stop = SubResource( 57 )
+
+[node name="DialogInteractionArea" type="Area2D" parent="."]
+visible = false
+collision_layer = 64
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogInteractionArea"]
+visible = false
+position = Vector2( 0, -55 )
+shape = SubResource( 71 )
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]

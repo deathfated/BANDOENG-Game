@@ -53,9 +53,9 @@ custom_constants/separation = 20
 alignment = 1
 
 [node name="Label" type="Label" parent="Menu/CenterRow/Buttons"]
-margin_top = 52.0
+margin_top = 92.0
 margin_right = 381.0
-margin_bottom = 140.0
+margin_bottom = 180.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 0.0509804, 0.0509804, 1 )
 custom_constants/shadow_offset_x = 1
@@ -64,20 +64,21 @@ custom_fonts/font = SubResource( 1 )
 text = "BANDOENG"
 
 [node name="NewStartButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
-margin_top = 160.0
+margin_top = 200.0
 margin_right = 381.0
-margin_bottom = 220.0
-scene_to_load = "res://Scene0.tscn"
+margin_bottom = 260.0
+scene_to_load = "res://Scenes/Scene0.tscn"
 
 [node name="ContinueButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
+visible = false
 margin_top = 240.0
 margin_right = 381.0
 margin_bottom = 300.0
 
 [node name="ExitButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 4 )]
-margin_top = 320.0
+margin_top = 280.0
 margin_right = 381.0
-margin_bottom = 380.0
+margin_bottom = 340.0
 
 [node name="CenterContainer" type="CenterContainer" parent="Menu/CenterRow"]
 margin_left = 385.0
@@ -99,7 +100,7 @@ margin_top = 566.0
 margin_right = 206.0
 margin_bottom = 597.0
 size_flags_vertical = 1
-text = "Pre-Alpha Version 1.0
+text = "Pre-Alpha Version 1.1
 Created by: Deathfated & Bara"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -110,3 +111,5 @@ visible = false
 
 [connection signal="pressed" from="Menu/CenterRow/Buttons/NewStartButton" to="." method="_on_NewStartButton_pressed"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
+
+[editable path="Menu/CenterRow/Buttons/NewStartButton"]

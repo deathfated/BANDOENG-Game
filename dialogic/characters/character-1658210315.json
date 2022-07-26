@@ -1,0 +1,37 @@
+{
+	"color": "#ff29c437",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1658210315.json",
+	"mirror_portraits": false,
+	"name": "Ucup",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -204,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Char Sprites/Ucup/Ucup_CS_Indifferent-min.png"
+		},
+		{
+			"name": "Happy",
+			"path": "res://Char Sprites/Ucup/Ucup_CS_Happy-Relieved-min.png"
+		},
+		{
+			"name": "Angry",
+			"path": "res://Char Sprites/Ucup/Ucup_CS_Anger-min.png"
+		},
+		{
+			"name": "Sad",
+			"path": "res://Char Sprites/Ucup/Ucup_CS_Sad-Worry-min.png"
+		},
+		{
+			"name": "Fearful",
+			"path": "res://Char Sprites/Ucup/Ucup_CS_Terror-Fear-min.png"
+		}
+	],
+	"scale": 50,
+	"theme": ""
+}

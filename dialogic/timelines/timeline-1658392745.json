@@ -1,0 +1,65 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Fearful",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(Ucup menghela nafas lelah, dia khawatir)"
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sad",
+			"text": "\"Aku harus mencari Viktor.\""
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sad",
+			"text": "\"Jalannya diawasi NICA!\""
+		},
+		{
+			"character": "character-1658392764.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "(\"Jangan sampai ada saksi yang lewat dari jalan ini. Kalaupun ada pastikan mereka tidak hidup. Paham?!\")"
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"Aduh! Aku harus menyampaikan ini ke Viktor!\""
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Angry",
+			"text": "\"Aku tidak punya pilihan lain selain melawan.\""
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1658392745.json",
+		"name": "Intro"
+	}
+}

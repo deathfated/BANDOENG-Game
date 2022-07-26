@@ -1,0 +1,20 @@
+{
+	"glossary": [
+		{
+			"extra": "test test",
+			"id": "1658213062-787",
+			"name": "Bandung",
+			"text": "A city in West Java. The setting for this story.",
+			"title": "Bandung",
+			"type": 1
+		}
+	],
+	"variables": [
+		{
+			"id": "1658212102-648",
+			"name": "Playstyle",
+			"type": 0,
+			"value": "Soldier"
+		}
+	]
+}

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Blop-Mark_DiAngelo-79054334.mp3-3411e252037c503026f9dda9e54a53e7.mp3str"
+
+[deps]
+
+source_file="res://Assets/Dialog/Blop-Mark_DiAngelo-79054334.mp3"
+dest_files=[ "res://.import/Blop-Mark_DiAngelo-79054334.mp3-3411e252037c503026f9dda9e54a53e7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

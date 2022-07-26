@@ -1,0 +1,25 @@
+{
+	"color": "#ff000000",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1658214863.json",
+	"mirror_portraits": false,
+	"name": "Victor",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -200,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Char Sprites/NPCs/Viktor_CS_Intense-Happy-min2.png"
+		},
+		{
+			"name": "Angry",
+			"path": "res://Char Sprites/NPCs/Viktor_CS_Anger-min2.png"
+		}
+	],
+	"scale": 50,
+	"theme": ""
+}

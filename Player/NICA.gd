@@ -132,5 +132,5 @@ func _on_Hurtbox_invincibility_started():
 func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
 
-func _on_Hitbox_area_entered(area):
+func _on_Hitbox_area_entered(_area):
 	state = ATTACK

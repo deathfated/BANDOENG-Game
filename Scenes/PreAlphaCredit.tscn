@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/BANDOENG_Sketch_Concept_Art_002.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Menu/Hack-Regular_32.tres" type="DynamicFont" id=2]
+
+[node name="TextureRect" type="Node"]
+
+[node name="Node" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -6.0
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -504.0
+margin_top = -213.0
+margin_right = 504.0
+margin_bottom = 213.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 2 )
+text = "THANK YOU FOR PLAYING THE
+PRE-ALPHA VERSION OF Bandoeng!
+
+MORE UPDATES WILL FOLLOW, PLEASE GIVE US
+SOME FEEDBACK OR SUGGESTIONS.
+
+Created by Deathfated & Bara
+
+using GODOT Engine
+& Dialogic plugin"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
