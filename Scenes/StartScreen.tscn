@@ -95,13 +95,13 @@ margin_bottom = 376.0
 texture = ExtResource( 7 )
 
 [node name="VersionLabel" type="Label" parent="."]
-margin_left = 6.0
-margin_top = 566.0
-margin_right = 206.0
-margin_bottom = 597.0
+margin_left = 2.0
+margin_top = 569.0
+margin_right = 212.0
+margin_bottom = 600.0
 size_flags_vertical = 1
 text = "Pre-Alpha Version 1.1
-Created by: Deathfated & Bara"
+Created by: Deathfated & Dan Jak"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -6,7 +6,6 @@ export var ACCELERATION = 500
 export var MAX_SPEED = 200
 export var FRICTION = 500
 
-
 enum {
 	MOVE,
 	ATTACK,
@@ -18,7 +17,6 @@ var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
 var stats = PlayerStats
 var playerisded = false
-
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
