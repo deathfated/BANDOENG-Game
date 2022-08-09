@@ -1,0 +1,41 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Aku selalu melihat dia memahat bambu ini setiap ronda. Tetapi, aku tidak menyangka sebanya ini... (terkekeh)."
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Happy",
+			"text": "Untuk apa... juga?"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1660046741.json",
+		"name": "In-Lemari"
+	}
+}

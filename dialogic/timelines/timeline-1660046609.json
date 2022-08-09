@@ -1,0 +1,65 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Happy",
+			"text": "Dia masih menyimpan ini? Melihat bandana itu, aku teringat pertama kali aku bertemu dengan Viktor."
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Angry",
+			"text": "Dia dulu anggota geng lokal yang ingin mengambil uangku. Kita berkelahi dan tidak ada yang mau menyerah."
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Happy",
+			"text": "Akhirnya yang menghentikan adalah badan kita sendiri yang kehabisan tenaga."
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Karena itu dia menghormatiku dan aku menghormati dia. "
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Setelah perkelahian itu kita berkawan dan perlahan menjadi sahabat utamaku. Dia sekarang hiidup lurus."
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Fearful",
+			"text": "Aku pun terkadang terkejut mantan preman itu menjadi ketua dari Pemuda Kemerdekaan di desa ini."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1660046609.json",
+		"name": "In-Bandana"
+	}
+}

@@ -1,0 +1,76 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sad",
+			"text": "Halo Pak RT, Apakah Viktor mampir ke sini tadi? Dia seharusnya meronda dengan kami. Tapi, dia belum datang juga. Sudah lewat dua jam."
+		},
+		{
+			"character": "character-1660046053.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Tidak ada A' Ucup. Tadi malam pun dia tidak mampir. Biasanya dia selalu datang bertukar ide dengan bapak."
+		},
+		{
+			"character": "character-1660046053.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "A' Ucup sudah mencoba mengunjungi Indekost Viktor atau mungkin dia lagi makan di Warung Teh Dinda?"
+		},
+		{
+			"condition": "",
+			"definition": "1660046187-858",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Di Warung Teh Dinda dia tidak ada Pak..., berarti tinggal Indekost Viktor..."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mungkin dia ada di situ..., saya coba ya Pak RT."
+		},
+		{
+			"definition": "1660046208-507",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1660045999.json",
+		"name": "Pak RT"
+	}
+}

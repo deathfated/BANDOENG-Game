@@ -1,0 +1,59 @@
+{
+	"events": [
+		{
+			"character": "character-1660047121.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"Saudara Viktor,\"  Pusat"
+		},
+		{
+			"character": "character-1660047121.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"saya mendapat informasi bahwa NICA kembali lagi bersama dengan Inggris. Esok sore beberapa perwakilan mereka akan dikirim ke beberapa Kantor Pemerintah perwakilan.\""
+		},
+		{
+			"character": "character-1660047121.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"Salah satunya adalah Kantor Camat di dekat desa Saudara Viktor.\""
+		},
+		{
+			"character": "character-1660047121.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\"Saya harap anda mempersiapkan akan kedatangan mereka dan mencari tahu apa rencana mereka. Salam, Pemuda Kemerdekaan Bandoeng\""
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Fearful",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sekarang, aku harus mencari Viktor."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1660047074.json",
+		"name": "In-Surat"
+	}
+}

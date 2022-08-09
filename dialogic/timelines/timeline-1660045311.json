@@ -1,0 +1,89 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Happy",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Viktor di mana? Biasanya dia yang menyambut kita saat jadwal ronda."
+		},
+		{
+			"character": "character-1660045445.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Dia tidak mungkinlah menyambut setiap hari. Mungkin dia bangun karena membaca novel pahlawannya terlalu lama."
+		},
+		{
+			"character": "character-1660045445.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ngomong-ngomong, sudah setahun dari Bung Karno mengatakan kita merdeka dari Koloni NICA."
+		},
+		{
+			"character": "character-1660045445.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Menurutmu, akan bagaimana kita sebagai negara yang bebas?"
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Aku tidak tahu juga. Tetapi, aku hanya senang keluargaku tidak dipalak lagi oleh mereka."
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sad",
+			"text": "Kau tahu, walau aku masih umur 8, aku ingat bapak-ibu harus menyisihkan makanan untuk Kakek karena jatah makan kita ditagih terus oleh NICA."
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Happy",
+			"text": "Sekarang kita bisa makan dan kerja untuk diri sendiri. Jadi, keadaan ini lebih baiklah."
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": ". . . . . . ."
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Sad",
+			"text": "Viktor tidak mungkin terlambat selama ini. Aku akan mencari dia dulu."
+		},
+		{
+			"character": "character-1658393803.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hati-hati di jalan Ucup!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1660045311.json",
+		"name": "Intro"
+	}
+}

@@ -1,0 +1,94 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Happy",
+			"text": "Teh, Viktor tadi mampir ke warung tidak?"
+		},
+		{
+			"character": "character-1660045880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Aku kurang tahu. Viktor tidak ada mampir pagi ini."
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Kira-kira kemarin malam dia mampir tidak?"
+		},
+		{
+			"character": "character-1660045880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Semalam Viktor cuma beli makan Ucup. Tidak ada bicara apa-apa. Dia langsung bayar lalu pergi."
+		},
+		{
+			"character": "character-1660045880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mungkin Ucup bisa tanya ke Pak RT?"
+		},
+		{
+			"condition": "",
+			"definition": "1660046208-507",
+			"event_id": "dialogic_012",
+			"value": "1"
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Wah tadi saya sudah ke Pak RT. Tidak ada Viktor disana. "
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1660045880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmm, atau langsung ke Indekost A' Viktor?"
+		},
+		{
+			"character": "character-1658210315.json",
+			"event_id": "dialogic_001",
+			"portrait": "Happy",
+			"text": "Saya coba ya. Terima kasih Teh."
+		},
+		{
+			"definition": "1660046187-858",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1660045796.json",
+		"name": "Warung Teh"
+	}
+}

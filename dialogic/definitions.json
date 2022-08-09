@@ -2,18 +2,18 @@
 	"glossary": [
 		{
 			"extra": "",
-			"id": "1658213062-787",
-			"name": "Bandung",
-			"text": "Kota yang terletak di Propinsi Jawa Barat. Latar tempat dari cerita ini.",
-			"title": "Bandung",
-			"type": 1
-		},
-		{
-			"extra": "",
 			"id": "1658820833-745",
 			"name": "NICA",
 			"text": "Tentara sipil yang menjadi perpanjangan pemerintahan Belanda pada bekas wilayah koloni Hindia Belanda.",
 			"title": "Nederlandsch Indische Civiele Administratie. ",
+			"type": 1
+		},
+		{
+			"extra": "",
+			"id": "1658213062-787",
+			"name": "Bandung",
+			"text": "Kota yang terletak di Propinsi Jawa Barat. Latar tempat dari cerita ini.",
+			"title": "Bandung",
 			"type": 1
 		}
 	],
@@ -23,6 +23,18 @@
 			"name": "Playstyle",
 			"type": 0,
 			"value": "Soldier"
+		},
+		{
+			"id": "1660046187-858",
+			"name": "WarungTehDone",
+			"type": 0,
+			"value": "0"
+		},
+		{
+			"id": "1660046208-507",
+			"name": "Pak RTDone",
+			"type": 0,
+			"value": "0"
 		}
 	]
 }
